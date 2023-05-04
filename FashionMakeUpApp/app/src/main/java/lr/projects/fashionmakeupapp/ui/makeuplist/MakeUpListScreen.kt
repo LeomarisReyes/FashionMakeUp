@@ -112,6 +112,7 @@ fun MakeUpListScreen(
     }
 }
 
+
 @Composable
 fun Pricing(price: String){
     Row(

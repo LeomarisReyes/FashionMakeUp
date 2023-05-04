@@ -1,7 +1,7 @@
 package lr.projects.fashionmakeupapp.model
 
 data class Product (
-    var id: String= "",
+    var id: String = "",
     var brand: String?= "",
     var name: String= "",
     var price: String?= "",

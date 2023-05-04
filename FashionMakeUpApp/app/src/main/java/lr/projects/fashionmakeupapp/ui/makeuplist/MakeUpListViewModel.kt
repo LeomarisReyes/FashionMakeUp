@@ -3,9 +3,9 @@ package lr.projects.fashionmakeupapp.ui.makeuplist
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import lr.projects.fashionmakeupapp.data.remote.network.NetworkResult
 import lr.projects.fashionmakeupapp.model.Product
 import lr.projects.fashionmakeupapp.data.repositories.MakeUpRepository
-import lr.projects.fashionmakeupapp.data.remote.network.NetworkResult
 import lr.projects.fashionmakeupapp.ui.BaseViewModel
 import lr.projects.fashionmakeupapp.ui.ViewEffect
 import lr.projects.fashionmakeupapp.ui.ViewEvent
@@ -22,18 +22,21 @@ class MakeUpListViewModel @Inject constructor(
 {
     init {
         viewModelScope.launch {
-            when(val response = makeUpRepository.getProducts()){
-                is NetworkResult.Success -> {
-                    setState {
-                        copy(makeUpList= response.data, isLoading = false)
+            makeUpRepository
+                .getProducts()
+                .collect { result ->
+                    when (result) {
+                        is NetworkResult.ApiError, is NetworkResult.ApiException -> {
+                            setEffect((UiEffect.ShowError))
+                            setState { copy(isLoading = false) }
+                        }
+                        is NetworkResult.Success -> {
+                            setState {
+                                copy(makeUpList = result.data, isLoading = false)
+                            }
+                        }
                     }
                 }
-                is NetworkResult.ApiError,
-                is NetworkResult.ApiException -> {
-                    setEffect((UiEffect.ShowError))
-                    setState { copy(isLoading = false) }
-                }
-            }
         }
     }
 

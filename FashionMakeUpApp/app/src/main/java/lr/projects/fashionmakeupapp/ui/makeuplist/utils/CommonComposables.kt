@@ -63,7 +63,7 @@ fun CardHeader(
                 buildAnnotatedString {
                 withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
                     append("Brand: ") }
-                    append(brand?:"-") },
+                append(brand?:"-") },
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis)
         }

@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material3.BottomAppBar
@@ -73,8 +72,8 @@ fun MakeUpApplication(){
        colorScheme = if(isSystemInDarkTheme()) darkColorScheme() else lightColorScheme()
     ){
         val snackbarHostState = remember { SnackbarHostState() }
-        Scaffold( topBar ={
-          TopAppBar(
+        Scaffold(
+            topBar ={ TopAppBar(
               title = {  Text(text = stringResource(id = R.string.app_name), color = Color.White )},
               colors =  TopAppBarDefaults.smallTopAppBarColors(containerColor = colorResource(id = R.color.darkPink))
           ) },

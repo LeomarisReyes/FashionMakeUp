@@ -14,7 +14,6 @@ import lr.projects.fashionmakeupapp.ui.makeuplist.MakeUpDetailsViewModel
 import lr.projects.fashionmakeupapp.ui.makeuplist.MakeUpListScreen
 import lr.projects.fashionmakeupapp.ui.makeuplist.MakeUpListViewModel
 
-
 @Composable
 fun MakeUpApp(snackbarHostState: SnackbarHostState) {
     val navController = rememberNavController()
@@ -29,7 +28,8 @@ fun MakeUpApp(snackbarHostState: SnackbarHostState) {
                 navArgument("itemId") { type = NavType.StringType })
         ) { navBackStackEntry ->
             val itemId = navBackStackEntry.arguments?.getString("itemId")
-            MakeUpDetailsScreen(navController, snackbarHostState,itemId)
+
+          MakeUpDetailsScreen(navController, snackbarHostState,itemId)
         }
     }
 }

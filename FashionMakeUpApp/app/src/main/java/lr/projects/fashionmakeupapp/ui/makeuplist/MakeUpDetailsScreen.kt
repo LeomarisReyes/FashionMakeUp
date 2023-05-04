@@ -95,7 +95,7 @@ fun AvailableColors(
 
     if(productItemColor?.isEmpty() == true){
         Text(text = "No colors available",
-             modifier = Modifier.padding(start = 20.dp, end = 20.dp, top = 10.dp))
+            modifier = Modifier.padding(start = 20.dp, end = 20.dp, top = 10.dp))
     } else {
 
         val griSize = if(productItemColor.size % 2 == 1){
