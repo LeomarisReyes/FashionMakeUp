@@ -26,8 +26,8 @@ The application also supports light and dark appearance modes. You can easily id
 
 This repository is divided into two branches:
 
- - **RemoData:** It has the connection to an API
- - **OfflineData:** In addition to the connection to the API, it supports offline data.
+ - [**RemoData:**](https://github.com/LeomarisReyes/FashionMakeUp/tree/RemoteData) It has the connection to an API
+ - [**OfflineData:**](https://github.com/LeomarisReyes/FashionMakeUp/tree/OfflineData) In addition to the connection to the API, it supports offline data.
 
 ### Requeriments
 
