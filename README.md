@@ -59,11 +59,11 @@ In this session you will see visual resources which will help you see each funct
 
 Demonstration of the display of the list consumed from the API and the display of product details. Additionally, support for light mode is shown.
 
-<p align="left"><img src="https://github.com/LeomarisReyes/FashionMakeUp/blob/RemoteData/Images/LigthMode.png" width=860 height=450/></p> 
+<p align="left"><img src="https://github.com/LeomarisReyes/FashionMakeUp/blob/RemoteData/Images/LigthMode.png" width=860 height=420/></p> 
 
 #### ➖ Dark mode 
 	 
-<p align="left"><img src="https://github.com/LeomarisReyes/FashionMakeUp/blob/RemoteData/Images/DarkMode.png" width=670 height=450/></p> 
+<p align="left"><img src="https://github.com/LeomarisReyes/FashionMakeUp/blob/RemoteData/Images/DarkMode.png" width=670 height=420/></p> 
 
 ### API Documentation 
 
